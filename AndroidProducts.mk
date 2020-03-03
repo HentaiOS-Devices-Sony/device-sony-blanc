@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/aosp_g1109.mk
+PRODUCT_MAKEFILES :=  \
+    $(LOCAL_DIR)/hentai_blanc_RoW.mk \
 
 COMMON_LUNCH_CHOICES += \
-    aosp_g1109-eng \
-    aosp_g1109-userdebug
-
+    hentai_blanc_RoW-eng \
+    hentai_blanc_RoW-userdebug \
+    hentai_blanc_RoW-user \
