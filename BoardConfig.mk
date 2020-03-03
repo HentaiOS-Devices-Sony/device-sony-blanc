@@ -15,7 +15,7 @@
 include device/sony/loire/PlatformConfig.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := unknown
-ifneq (,$(filter %g1109,$(TARGET_PRODUCT)))
+ifneq (,$(filter %hentai_blanc_RoW,$(TARGET_PRODUCT)))
 TARGET_BOOTLOADER_BOARD_NAME := G1109
 else
 $(error Unrecognized value for TARGET_PRODUCT: "$(TARGET_PRODUCT)")
@@ -25,6 +25,16 @@ endif
 PRODUCT_PLATFORM := loire
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=blanc
+
+#Use Clang instead of Gcc 4.9
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_CLANG_VERSION := r353983c
+
+#kernel
+BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_SOURCE := kernel/sony/msm-4.9/kernel
+TARGET_NEEDS_DTBOIMAGE := false
 
 # Partition information
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
