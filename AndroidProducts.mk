@@ -14,8 +14,12 @@
 
 PRODUCT_MAKEFILES :=  \
     $(LOCAL_DIR)/hentai_blanc_RoW.mk \
-
+    $(LOCAL_DIR)/hentai_blanc_RoW_Go.mk \
+    
 COMMON_LUNCH_CHOICES += \
     hentai_blanc_RoW-eng \
     hentai_blanc_RoW-userdebug \
     hentai_blanc_RoW-user \
+    hentai_blanc_RoW_Go-eng \
+    hentai_blanc_RoW_Go-userdebug \
+    hentai_blanc_RoW_Go-user \
